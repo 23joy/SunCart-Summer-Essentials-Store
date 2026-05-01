@@ -9,7 +9,9 @@ const Popular =async () => {
     return (
         <div>
             <h2 className='font-bold text-2xl'>Popular Product</h2>
-            {product.map((product=> <ProductCard key={product.id} product={product}></ProductCard>))}
+           <div className='grid grid-cols-3 gap-5 m-10 items-center justify-center'>
+             {product.map((product=> <ProductCard key={product.id} product={product}></ProductCard>))}
+           </div>
         </div>
     );
 };
