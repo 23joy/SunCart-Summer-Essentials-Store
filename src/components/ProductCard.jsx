@@ -20,8 +20,8 @@ const ProductCard = ({ product }) => {
                 <p className=' font-semibold'>Rating:{product.rating}</p>
                 <p className='font-semibold'>Price{product.price}</p>
             </div>
-            <Link href={'/productDetails'}>
-            <button className='btn'>Product Details</button>
+            <Link href={`/productDetails/${product.id}`}>
+            <button className='btn w-full rounded-xl'>Product Details</button>
             </Link>
         </Card>
     );
