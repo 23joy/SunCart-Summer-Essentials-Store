@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 12,
+    "description": "Stylish UV protection sunglasses perfect for summer outings.",
+    "image": "https://i.postimg.cc/3RZqX1hB/sunglasses.jpg",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Men's Summer T-Shirt",
+    "brand": "CoolWear",
+    "price": 20,
+    "rating": 4.5,
+    "stock": 20,
+    "description": "Lightweight cotton t-shirt for comfortable summer wear.",
+    "image": "https://i.postimg.cc/5y7p1K1s/tshirt.jpg",
+    "category": "Clothing"
+  },
+  {
+    "id": 3,
+    "name": "Aloe Vera Sunscreen SPF 50",
+    "brand": "NatureCare",
+    "price": 12,
+    "rating": 4.8,
+    "stock": 15,
+    "description": "Protects your skin from harmful UV rays and keeps it moisturized.",
+    "image": "https://i.postimg.cc/yx1n1J9M/sunscreen.jpg",
+    "category": "Skincare"
+  },
+  {
+    "id": 4,
+    "name": "Beach Slippers",
+    "brand": "WaveWalk",
+    "price": 10,
+    "rating": 4.3,
+    "stock": 18,
+    "description": "Comfortable and durable slippers perfect for beach trips.",
+    "image": "https://i.postimg.cc/VvYwYg2K/slippers.jpg",
+    "category": "Footwear"
+  },
+  {
+    "id": 5,
+    "name": "Straw Summer Hat",
+    "brand": "SunnyStyle",
+    "price": 14,
+    "rating": 4.6,
+    "stock": 10,
+    "description": "Wide-brim straw hat to protect from sun and add style.",
+    "image": "https://i.postimg.cc/3x1Xg0wL/hat.jpg",
+    "category": "Accessories"
+  },
+  {
+    "id": 6,
+    "name": "Hydrating Face Mist",
+    "brand": "FreshGlow",
+    "price": 9,
+    "rating": 4.4,
+    "stock": 25,
+    "description": "Instant hydration spray to refresh your skin in hot weather.",
+    "image": "https://i.postimg.cc/N0vVYv3s/facemist.jpg",
+    "category": "Skincare"
+  },
+  {
+    "id": 7,
+    "name": "Women's Summer Dress",
+    "brand": "BreezeFashion",
+    "price": 30,
+    "rating": 4.7,
+    "stock": 8,
+    "description": "Elegant and breathable dress perfect for summer days.",
+    "image": "https://i.postimg.cc/zX6nqK2F/dress.jpg",
+    "category": "Clothing"
+  },
+  {
+    "id": 8,
+    "name": "Portable Mini Fan",
+    "brand": "CoolBreeze",
+    "price": 11,
+    "rating": 4.2,
+    "stock": 30,
+    "description": "Rechargeable handheld fan to stay cool anywhere.",
+    "image": "https://i.postimg.cc/9f8Y0c6W/fan.jpg",
+    "category": "Electronics"
+  }
+]
