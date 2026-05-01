@@ -16,7 +16,7 @@ const Navbar = () => {
                     <h2 className='font-extrabold text-4xl'>Sun<span className='text-emerald-500'>Cart</span></h2></Link>
                 </div>
                 <ul className="flex items-center gap-4">
-                    <li><Link href="/">Home</Link></li>
+                    <li><Link href="/" >Home</Link></li>
                     <li><Link href="/allProduct">Products</Link></li>
                     <li><Link href="profile">My Profile</Link></li>
                 </ul>
