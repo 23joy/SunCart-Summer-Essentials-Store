@@ -11,19 +11,30 @@ import {
     Label,
     TextField,
 } from "@heroui/react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { GrGoogle } from "react-icons/gr";
 
 export default function LoginPage() {
+     const router=useRouter()
     const onSubmit = async (e) => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
         const { data, error } = await authClient.signIn.email({
-            email, 
-            password, 
-            callbackURL:'/'
-
+            email,
+            password,
         });
-        console.log({data,error})
+        if(!error){
+            router.push('/')
+
+        }
+     }
+     const handleGoogleSingIn=async()=>{
+        const data=await authClient.signIn.social({
+            provider:"google"
+        })
+        console.log(data,'data')
     };
 
     return (
@@ -82,6 +93,9 @@ export default function LoginPage() {
                     </Button>
                 </div>
             </Form>
+            <p className="flex justify-center">If you not Register? <Link href={'/signup'} className="text-emerald-800 ">Register Now</Link></p>
+            <p className=" text-center">Or</p>
+            <Button onClick={handleGoogleSingIn} className={'w-full'}><GrGoogle></GrGoogle>Sign In with Google</Button>
         </Card>
     );
 }
