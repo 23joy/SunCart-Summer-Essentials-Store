@@ -4,11 +4,13 @@ import { mongodbAdapter } from "better-auth/adapters/mongodb";
 
 
 const client = new MongoClient(process.env.MONGO_DB);
-const db = client.db();
+const db = client.db(SunCart);
 
 export const auth = betterAuth({
   database: mongodbAdapter(db, {
-    // Optional: if you don't provide a client, database transactions won't be enabled.
     client
   }),
+  emailAndPassword:{
+    enabled:true,
+  }
 });

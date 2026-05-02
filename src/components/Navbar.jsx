@@ -22,8 +22,8 @@ const Navbar = () => {
                 </ul>
                 <div className='flex gap-4'>
                     <ul className='flex items-center text-sm gap-3'>
-                        <li><Link href={'/signup'} className='btn'>SignUP</Link></li>
-                        <li><Link href={'/signin'} className='btn'>SignIn</Link></li>
+                        <li><Link href={'/login'} className='btn'>Login</Link></li>
+                        <li><Link href={'/register'} className='btn'>Register</Link></li>
                     </ul>
                 </div>
             </header>
