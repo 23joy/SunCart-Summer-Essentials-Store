@@ -1,6 +1,7 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
+import { signUp } from "@/lib/auth-client";
 import {
     Button,
     Card,
@@ -10,27 +11,44 @@ import {
     Input,
     Label,
     TextField,
+    Toast,
 } from "@heroui/react";
+import { toast } from "react-toastify";
 
-export default function LoginPage() {
+export default function SignUpPage() {
     const onSubmit = async (e) => {
         e.preventDefault();
+        const name = e.target.name.value;
         const email = e.target.email.value;
+        const image = e.target.image.value;
         const password = e.target.password.value;
-        const { data, error } = await authClient.signIn.email({
-            email, 
-            password, 
-            callbackURL:'/'
-
+        const { data, error } = await authClient.signUp.email({
+            name, // required
+            email, // required
+            password, // required
+            image,
+            
         });
-        console.log({data,error})
+        console.log({ data, error })
+        if(error){
+            toast.warn("This email is  already register ")
+        }
+        if(data){
+            alert("Signin successfully")
+        }
     };
 
     return (
         <Card className="border mx-auto w-125 py-10 mt-5">
-            <h1 className="text-center text-2xl font-bold">Log In </h1>
+            <h1 className="text-center text-2xl font-bold">Registration now</h1>
 
             <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
+                <TextField isRequired name="name" type="text">
+                    <Label>Name</Label>
+                    <Input placeholder="Enter your name" />
+                    <FieldError />
+                </TextField>
+
                 <TextField
                     isRequired
                     name="email"
@@ -45,6 +63,12 @@ export default function LoginPage() {
                 >
                     <Label>Email</Label>
                     <Input placeholder="john@example.com" />
+                    <FieldError />
+                </TextField>
+
+                <TextField isRequired name="image" type="text">
+                    <Label>Image URL</Label>
+                    <Input placeholder="Image URL" />
                     <FieldError />
                 </TextField>
 
@@ -78,8 +102,9 @@ export default function LoginPage() {
                 <div className="flex gap-2">
                     <Button type="submit" className="w-full">
                         <Check />
-                        Submit
+                        Register
                     </Button>
+
                 </div>
             </Form>
         </Card>

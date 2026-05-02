@@ -4,6 +4,7 @@ import { FaRegCircleUser } from 'react-icons/fa6';
 import {montserrat} from '@/lib/font'
 import logo from '../../public/suncart.webp'
 import Image from 'next/image';
+import NavLink from './NavLink';
 
 
 const Navbar = () => {
@@ -16,14 +17,14 @@ const Navbar = () => {
                     <h2 className='font-extrabold text-4xl'>Sun<span className='text-emerald-500'>Cart</span></h2></Link>
                 </div>
                 <ul className="flex items-center gap-4">
-                    <li><Link href="/" >Home</Link></li>
-                    <li><Link href="/allProduct">Products</Link></li>
-                    <li><Link href="profile">My Profile</Link></li>
+                    <li><NavLink href="/" >Home</NavLink></li>
+                    <li><NavLink href="/allProduct">Products</NavLink></li>
+                    <li><NavLink href="profile">My Profile</NavLink></li>
                 </ul>
                 <div className='flex gap-4'>
                     <ul className='flex items-center text-sm gap-3'>
                         <li><Link href={'/login'} className='btn'>Login</Link></li>
-                        <li><Link href={'/register'} className='btn'>Register</Link></li>
+                        <li><Link href={'/signup'} className='btn'>Register</Link></li>
                     </ul>
                 </div>
             </header>
