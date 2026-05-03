@@ -18,9 +18,9 @@ const ProfilePage = () => {
                     <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
                 </Avatar>
                 <div>
-                    <h2 className='text-xl font-bold'>UserName:{user?.name}</h2>
-                    <p><span className='font-semibold'>UserID:</span>{user?.id}</p>
-                    <p><span className='font-semibold'>UserEmail:</span>{user?.email}</p>
+                    <h2 className='text-xl font-bold text-indigo-800'>UserName : {user?.name}</h2>
+                    <p><span className='font-semibold'>UserID : </span>{user?.id}</p>
+                    <p><span className='font-semibold'>UserEmail : </span>{user?.email}</p>
                 </div>
                 <UpdateProfile/>
             </Card>

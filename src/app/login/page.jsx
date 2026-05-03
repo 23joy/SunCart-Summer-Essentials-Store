@@ -25,8 +25,8 @@ export default function LoginPage() {
             email,
             password,
         });
-        if(!error){
-            router.push('/')
+        if(error){
+            alert(error.message)
 
         }
      }
@@ -35,6 +35,7 @@ export default function LoginPage() {
             provider:"google"
         })
         console.log(data,'data')
+        
     };
 
     return (
