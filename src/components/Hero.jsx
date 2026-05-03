@@ -4,7 +4,7 @@ import React from 'react';
 const Hero = () => {
     return (
         <div
-            className="hero min-h-screen"
+            className="hero min-h-screen mx-auto container rounded-xl mt-5"
             style={{
                 backgroundImage:
                     "url('https://png.pngtree.com/thumb_back/fh260/background/20231221/pngtree-shopping-cart-gift-box-orange-creative-background-image_15551116.png')",
@@ -12,7 +12,7 @@ const Hero = () => {
         >
             <div className="hero-overlay"></div>
             <div className="hero-content text-neutral-content text-center">
-                <div className="max-w-md">
+                <div className="max-w-md text-emerald-600">
                     <h1 className="mb-5 text-5xl font-bold">Hello!Customers</h1>
                     <div className='mb-5 text-2xl font-bold'>
                         <p>LIMITED TIME OFFERS</p>

@@ -7,8 +7,8 @@ const Popular =async () => {
     const product=products.slice(0,3);
     return (
         <div>
-            <h2 className='font-bold text-2xl'>Popular Product</h2>
-           <div className='grid grid-cols-3 gap-5 m-10 items-center justify-center'>
+            <h2 className='font-bold underline text-blue-900 text-2xl  m-10 text-center'>Popular Product</h2>
+           <div className='gap-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'>
              {product.map((product=> <ProductCard key={product.id} product={product}></ProductCard>))}
            </div>
         </div>

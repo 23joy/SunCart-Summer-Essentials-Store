@@ -20,7 +20,7 @@ const Navbar = () => {
     }
     console.log(user)
     return (
-        <nav className="sticky top-0 z-40 w-full border-b border-separator bg-background/70 backdrop-blur-lg " >
+        <nav className="sticky container mx-auto  border-b border-separator bg-background/70 backdrop-blur-lg " >
             <header className="flex h-16 items-center justify-between px-6">
                 <div className="flex items-center gap-3">
                     <Link href={"/"} className={`${montserrat.className}  text-blue-600 flex justify-center items-center `} >
@@ -28,14 +28,14 @@ const Navbar = () => {
                         <h2 className='font-extrabold text-4xl'>Sun<span className='text-emerald-500'>Cart</span></h2></Link>
                 </div>
                 <ul className="flex items-center gap-4">
-                    <li><NavLink href="/" >Home</NavLink></li>
+                    <li><NavLink href="/"  >Home</NavLink></li>
                     <li><NavLink href="/allProduct">Products</NavLink></li>
                     <li><NavLink href="profile">My Profile</NavLink></li>
                 </ul>
                 <div className='flex gap-4'>
                     {!user && (<ul className='flex items-center text-sm gap-3'>
-                        <li><Link href={'/login'} className='btn'>Login</Link></li>
-                        <li><Link href={'/signup'} className='btn'>Register</Link></li>
+                        <li  className='hover:bg-blue-600 text-black duration-900 rounded-xl p-2'><Link href={'/login'}>Login</Link></li>
+                        <li  className='hover:bg-emerald-700 text-black duration-900 rounded-xl p-2'><Link href={'/signup'}>Register</Link></li>
                     </ul>)}
                     {user && (<div className='flex gap-3 justify-center'>
                         <Avatar size='sm'>
