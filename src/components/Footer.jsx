@@ -5,7 +5,7 @@ import { IoLogoFacebook, IoLogoWhatsapp } from 'react-icons/io';
 
 const Footer = () => {
     return (
-        <footer className="footer footer-horizontal footer-center bg-blue-400 text-base-content rounded p-10 mt-10">
+        <footer className="footer footer-horizontal footer-center bg-blue-400 text-base-content rounded p-10 mt-10 sm:bg-cover">
             <nav className="grid grid-flow-col gap-4">
                 <a className="link link-hover">About us</a>
                 <a className="link link-hover">Contact</a>

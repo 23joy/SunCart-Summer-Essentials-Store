@@ -9,7 +9,7 @@ const AllProductPage =async () => {
     return (
         <div className='max-w-[80%] mx-auto m-5 '>
             <h2 className='font-bold text-2xl mb-10'>All Product: <span className='text-emerald-700'>{allProduct.length}</span></h2>
-            <div className='grid grid-cols-3 gap-5 '>
+            <div className='gap-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'>
                 {allProduct.map((all)=><AllProduct key={all.id} all={all}></AllProduct>)}
             </div>
         </div>
