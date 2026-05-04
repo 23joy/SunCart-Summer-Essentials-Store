@@ -4,7 +4,7 @@ import React from 'react';
 const Hero = () => {
     return (
         <div
-            className="hero min-h-screen mx-auto container rounded-xl mt-5"
+            className="hero min-h-screen mx-auto container md:h-[500px] object-contain md:object-cove rounded-xl mt-5"
             style={{
                 backgroundImage:
                     "url('https://png.pngtree.com/thumb_back/fh260/background/20231221/pngtree-shopping-cart-gift-box-orange-creative-background-image_15551116.png')",

@@ -1,7 +1,6 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
-import { signUp } from "@/lib/auth-client";
 import {
     Button,
     Card,
@@ -27,9 +26,9 @@ export default function SignUpPage() {
         const image = e.target.image.value;
         const password = e.target.password.value;
         const { data, error } = await authClient.signUp.email({
-            name, 
-            email, 
-            password, 
+            name,
+            email,
+            password,
             image,
 
         });
@@ -50,7 +49,8 @@ export default function SignUpPage() {
     };
 
     return (
-        <Card className="border mx-auto  py-10 mt-5">
+       <div className="p-10 m-10">
+         <Card className="mx-auto ">
             <h1 className="text-center text-2xl font-bold">Registration now</h1>
 
             <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
@@ -104,7 +104,7 @@ export default function SignUpPage() {
                 >
                     <Label>Password</Label>
                     <Input placeholder="Enter your password" />
-                    <Description>
+                    <Description className="text-red-400">
                         Must be at least 8 characters with 1 uppercase and 1 number
                     </Description>
                     <FieldError />
@@ -118,9 +118,10 @@ export default function SignUpPage() {
 
                 </div>
                 <p className="flex justify-center">If you not Register? <Link href={'/login'} className="text-emerald-800 ">LogIn Now</Link></p>
-            <p className=" text-center">Or</p>
-            <Button onClick={handleGoogleSignUp} type="submit" className={"w-full"}><GrGoogle></GrGoogle>Sign In with Google</Button>
+                <p className=" text-center">Or</p>
+                <Button onClick={handleGoogleSignUp} type="submit" className={"w-full"}><GrGoogle></GrGoogle>Sign In with Google</Button>
             </Form>
         </Card>
+       </div>
     );
 }
