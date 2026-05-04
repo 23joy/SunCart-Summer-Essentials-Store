@@ -5,6 +5,8 @@ import { Geist, Oswald, } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ToastContainer } from "react-toastify";
+import "animate.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +33,7 @@ export default function RootLayout({ children }) {
         <Navbar ></Navbar>
         <main >
           {children}
+          <ToastContainer position="top-center"></ToastContainer>
         </main>
         <Footer></Footer>
         </body>

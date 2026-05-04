@@ -14,6 +14,7 @@ import {
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { GrGoogle } from "react-icons/gr";
+import { toast } from "react-toastify";
 
 export default function LoginPage() {
     const router = useRouter()
@@ -26,7 +27,7 @@ export default function LoginPage() {
             password,
         });
         if (error) {
-            alert(error.message)
+            toast.error(error.message)
 
         }
         if(data){
@@ -37,7 +38,9 @@ export default function LoginPage() {
         const data = await authClient.signIn.social({
             provider: "google"
         })
-        console.log(data, 'data')
+        if(data){
+            toast.success("SignUp successfully");
+        }
 
     };
 
@@ -46,7 +49,7 @@ export default function LoginPage() {
             <Card className=" mx-auto">
                 <h1 className="text-center text-2xl font-bold">Log In </h1>
 
-                <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
+                <Form className="flex mx-auto flex-col gap-4" onSubmit={onSubmit}>
                     <TextField
                         isRequired
                         name="email"

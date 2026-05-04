@@ -10,7 +10,6 @@ import {
     Input,
     Label,
     TextField,
-    Toast,
 } from "@heroui/react";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
@@ -33,19 +32,22 @@ export default function SignUpPage() {
 
         });
         console.log({ data, error })
-        if (!error) {
-            router.push('/login')
-
+        if (error) {
+            toast.error(error.message)
+            return
         }
         if (data) {
-            alert("Signin successfully")
+
+        router.push("/")
         }
     }
     const handleGoogleSignUp = async () => {
         const data = await authClient.signIn.social({
             provider: "google"
         })
-        console.log(data, 'data')
+        if(data){
+            router.push('/login')
+        }
     };
 
     return (
@@ -53,7 +55,7 @@ export default function SignUpPage() {
          <Card className="mx-auto ">
             <h1 className="text-center text-2xl font-bold">Registration now</h1>
 
-            <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
+            <Form className="flex mx-auto flex-col gap-4" onSubmit={onSubmit}>
                 <TextField isRequired name="name" type="text">
                     <Label>Name</Label>
                     <Input placeholder="Enter your name" />
@@ -119,7 +121,7 @@ export default function SignUpPage() {
                 </div>
                 <p className="flex justify-center">If you not Register? <Link href={'/login'} className="text-emerald-800 ">LogIn Now</Link></p>
                 <p className=" text-center">Or</p>
-                <Button onClick={handleGoogleSignUp} type="submit" className={"w-full"}><GrGoogle></GrGoogle>Sign In with Google</Button>
+                <Button onClick={handleGoogleSignUp} type="button" className={"w-full"}><GrGoogle></GrGoogle>Sign In with Google</Button>
             </Form>
         </Card>
        </div>

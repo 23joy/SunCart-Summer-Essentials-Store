@@ -24,3 +24,5 @@ React icon : `npm i @heroui/styles @heroui/react`;
 React toastify : `npm i react-toastify`;
 
 Better-auth : `npm install better-auth`;
+
+Animate-style : ` npm install animate.css`;
