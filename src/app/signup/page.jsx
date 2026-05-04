@@ -42,15 +42,15 @@ export default function SignUpPage() {
             alert("Signin successfully")
         }
     }
-    const handleGoogleLogIn = async () => {
-        const data = await authClient.signUp.social({
+    const handleGoogleSignUp = async () => {
+        const data = await authClient.signIn.social({
             provider: "google"
         })
         console.log(data, 'data')
     };
 
     return (
-        <Card className="border mx-auto w-125 py-10 mt-5">
+        <Card className="border mx-auto  py-10 mt-5">
             <h1 className="text-center text-2xl font-bold">Registration now</h1>
 
             <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
@@ -117,10 +117,10 @@ export default function SignUpPage() {
                     </Button>
 
                 </div>
-            </Form>
-            <p className="flex justify-center">If you not Register? <Link href={'/login'} className="text-emerald-800 ">LogIn Now</Link></p>
+                <p className="flex justify-center">If you not Register? <Link href={'/login'} className="text-emerald-800 ">LogIn Now</Link></p>
             <p className=" text-center">Or</p>
-            <Button onClick={handleGoogleLogIn} className={'w-full'}><GrGoogle></GrGoogle>Sign In with Google</Button>
+            <Button onClick={handleGoogleSignUp} type="submit" className={"w-full"}><GrGoogle></GrGoogle>Sign In with Google</Button>
+            </Form>
         </Card>
     );
 }

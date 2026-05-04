@@ -1,7 +1,6 @@
 'use client'
 import Link from 'next/link';
 import React from 'react';
-import { FaRegCircleUser } from 'react-icons/fa6';
 import { montserrat } from '@/lib/font'
 import logo from '../../public/suncart.webp'
 import Image from 'next/image';

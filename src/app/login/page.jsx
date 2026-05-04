@@ -16,7 +16,7 @@ import { useRouter } from "next/navigation";
 import { GrGoogle } from "react-icons/gr";
 
 export default function LoginPage() {
-     const router=useRouter()
+    const router = useRouter()
     const onSubmit = async (e) => {
         e.preventDefault();
         const email = e.target.email.value;
@@ -25,21 +25,21 @@ export default function LoginPage() {
             email,
             password,
         });
-        if(error){
+        if (error) {
             alert(error.message)
 
         }
-     }
-     const handleGoogleSingIn=async()=>{
-        const data=await authClient.signIn.social({
-            provider:"google"
+    }
+    const handleGoogleSingIn = async () => {
+        const data = await authClient.signIn.social({
+            provider: "google"
         })
-        console.log(data,'data')
-        
+        console.log(data, 'data')
+
     };
 
     return (
-        <Card className="mx-auto w-125 py-10 mt-5">
+        <Card className="mx-auto py-10 mt-5">
             <h1 className="text-center text-2xl font-bold">Log In </h1>
 
             <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
@@ -93,10 +93,10 @@ export default function LoginPage() {
                         Submit
                     </Button>
                 </div>
+                <p className="flex justify-center">If you not Register? <Link href={'/signup'} className="text-emerald-800 ">Register Now</Link></p>
+                <p className=" text-center">Or</p>
+                <Button onClick={handleGoogleSingIn} className={'w-full'}><GrGoogle></GrGoogle>Sign In with Google</Button>
             </Form>
-            <p className="flex justify-center">If you not Register? <Link href={'/signup'} className="text-emerald-800 ">Register Now</Link></p>
-            <p className=" text-center">Or</p>
-            <Button onClick={handleGoogleSingIn} className={'w-full'}><GrGoogle></GrGoogle>Sign In with Google</Button>
         </Card>
     );
 }
