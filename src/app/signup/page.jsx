@@ -51,7 +51,7 @@ export default function SignUpPage() {
     };
 
     return (
-       <div className="p-10 m-10">
+       <div className="p-5 m-10">
          <Card className="mx-auto ">
             <h1 className="text-center text-2xl font-bold">Registration now</h1>
 

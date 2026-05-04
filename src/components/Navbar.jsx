@@ -56,8 +56,8 @@ const Navbar = () => {
                     <li className='hover:bg-blue-600 text-black duration-900 rounded-xl p-2'><Link href={'/login'}>Login</Link></li>
                     <li className='hover:bg-emerald-700 text-black duration-900 rounded-xl p-2'><Link href={'/signup'}>Register</Link></li>
                 </ul>)}
-                {user && (<Link href={'/profile'}>
-                    <div className='flex gap-3 justify-center'>
+                {user && (<div className='flex gap-2'>
+                    <Link href={'/profile'} className='flex gap-3 justify-center'>
                         <Avatar size='sm'>
                             <Avatar.Image alt="John Doe"
                                 src={user?.image}
@@ -65,9 +65,9 @@ const Navbar = () => {
                             />
                             <Avatar.Fallback >{user?.name.charAt(0)}</Avatar.Fallback>
                         </Avatar>
-                        <Button onClick={handleSignOut} size='sm' variant='danger'>SignOut</Button>
-                    </div>
-                </Link>)}
+                    </Link>
+                     <Link href={'/'}><Button onClick={handleSignOut} size='sm' variant='danger'>SignOut</Button></Link>
+                </div>)}
             </div>
         </div>
 
